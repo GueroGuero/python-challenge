@@ -8,7 +8,7 @@ total_amount = []
 average_change = []
 
 #read csv
-file = r"C:\Users\Güero\Desktop\Starter_Code\PyBank\Resources\budget_data.csv"
+file = r"C:\Users\Güero\Desktop\python-challenge\PyBank\Resources\budget_data.csv"
 print(file)
 
 #open csv and use encoding
