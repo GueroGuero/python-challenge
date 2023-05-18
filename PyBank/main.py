@@ -8,12 +8,12 @@ total_amount = []
 average_change = []
 
 #read csv
-file = r"C:\Users\Güero\Desktop\python-challenge\PyBank\Resources\budget_data.csv"
-print(file)
+csvfile = r"C:\Users\Güero\Desktop\python-challenge\PyBank\Resources\budget_data.csv"
+print(csvfile)
 
 #open csv and use encoding
-with open(file, encoding="utf-8") as csvfile:
-    csvreader = csv.reader(file, delimiter=",")
+with open(csvfile, encoding="utf-8") as csvfile:
+    csvreader = csv.reader(csvfile, delimiter=",")
     print(csvreader)
     #ignore the headers
     csvheader = next(csvreader)
@@ -48,13 +48,13 @@ print(f"Greatest Increase in Profits: {total_months[greatest_increase_month]} ($
 print(f"Greatest Decrease in Profits: {total_months[greatest_decrease_month]} (${(str(greatest_decrease))})")
 
 #make text file
-analysis = os.path.join("Analysis", "FinancialAnalysis.txt")
+analysis = r"C:\Users\Güero\Desktop\python-challenge\PyBank\Analysis\FinancialAnalysis.txt"
 with open(analysis, "w") as file:
     file.write("Financial Analysis")
     file.write("\n")
     file.write("-------------------")
     file.write("\n")
-    file.wrtie(f"Total Months : {len(total_months)}")
+    file.write(f"Total Months : {len(total_months)}")
     file.write("\n")
     file.write(f"Total : ${sum(total_amount)}")
     file.write("\n")
