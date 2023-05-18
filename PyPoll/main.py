@@ -8,9 +8,9 @@ print(csvpath)
 
 #make variables
 total_votes = []
-stockham_votes = []
-degette_votes = []
-doane_votes = []
+stockham_votes = 0
+degette_votes = 0
+doane_votes = 0
 
 #open csv and encode
 with open(csvpath, encoding="utf-8") as csvfile:
@@ -60,7 +60,7 @@ print(f"Winner: {winner}")
 print("-------------------------")
 
 #make text file
-analysis = os.path.join("Analysis", "ElectionAnalysis.txt")
+analysis = r"C:\Users\Güero\Desktop\python-challenge\PyPoll\Analysis\ElectionAnalysis.txt"
 with open(analysis,"w") as file:
 
     file.write("Election Results")
